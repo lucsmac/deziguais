@@ -4,6 +4,7 @@ import bg from './../../assets/imgs/bg.png'
 import mandatoColetivo from './../../assets/imgs/mandato-coletivo.jpg'
 
 export const Container = styled.div`
+  width: 100%;
   background-color: var(--background);
 `
 
@@ -16,7 +17,33 @@ export const Hero = styled.div`
   .logo {
     margin-left: 120px;
     display: block;
-    height: 200px;
+    width: 300px;
+  }
+
+  @media (max-width: 980px) {
+    .logo {
+      width: 300px;
+      margin-left: 50px;
+    }
+  }
+
+  @media (max-width: 790px) {
+    padding: 5rem 5vw;
+  }
+
+  @media (max-width: 540px) {
+    padding: 3rem 5vw;
+    .logo {
+      width: 200px;
+      margin-left: 20px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .logo {
+      width: 100px;
+      margin-left: 20px;
+    }
   }
 `
 
@@ -31,6 +58,18 @@ export const OQueSomos = styled.section`
     width: 100%;
     padding: 40px;
   }
+
+  @media (max-width: 1100px) {
+    padding: 2rem 5vw;
+  }
+
+  @media (max-width: 540px) {
+    padding: 1rem;
+
+    .o-que-somos__img {
+      padding: 0;
+    }
+  }
 `
 
 export const OQueSomosContent = styled.div`
@@ -38,18 +77,16 @@ export const OQueSomosContent = styled.div`
   max-width: 80%;
   margin: 0 auto;
   grid-template-columns: 1fr 330px;
+  column-gap: 20px;
   justify-content: space-between;
 
   .o-que-somos-content__img {
     width: 330px;
     height: 400px;
     display: grid;
-    justify-content: flex-end;
   }
 
   .o-que-somos-content__img img {
-    display: block;
-    text-align: right;
     border-radius: 16px;
   }
 
@@ -63,6 +100,38 @@ export const OQueSomosContent = styled.div`
 
     position: absolute;
     transform: translate3d(-20px, 20px, 0);
+  }
+  
+  @media (max-width: 980px) {
+    max-width: 100%;
+  }
+   
+  @media (max-width: 790px) {
+    margin: 2rem 0;
+    grid-template-columns: 1fr 250px;
+  }
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+  }
+
+  .o-que-somos-content__img {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+
+  .o-que-somos-content__img::after {
+    display: none;
+  }
+    
+  .o-que-somos-content__img img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    height: auto;
+    align-self: center;
+    justify-self: center;
   }
 `
 
@@ -91,6 +160,35 @@ export const OQueSomosText = styled.div`
     color: var(--tertiary);
     max-width: 80%;
   }
+  
+  @media (max-width: 790px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      max-width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 540px) {
+    width: 100%;
+    padding: 0;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h2::after {
+      height: 3px;
+    }
+
+    p {
+      max-width: 100%;
+      font-size: 1rem;
+    }
+  }
 
 `
 
@@ -111,6 +209,7 @@ export const MandatoColetivo = styled.section`
     color: var(--white);
     padding-bottom: 2rem;
     text-transform: uppercase;
+    text-align: center;
   }
 
   p {
@@ -131,6 +230,22 @@ export const MandatoColetivo = styled.section`
     height: 10px;
     background-color: var(--secondary);
   }
+
+  @media (max-width: 540px) {
+    padding: 2rem 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    p::after {
+      height: 3px;
+    }
+  }
 `
 
 export const Deziguais = styled.div`
@@ -139,6 +254,14 @@ export const Deziguais = styled.div`
 
   background: url(${bg}) no-repeat center;
   background-size: cover;
+  
+  @media (max-width: 1100px) {
+    padding: 2rem 5vw;
+  }
+
+  @media (max-width: 540px) {
+    padding: 2rem 1rem;
+  }
 `
 
 export const Contact = styled.div`
@@ -193,6 +316,24 @@ export const Contact = styled.div`
     margin-left: 1rem;
     width: 2rem;
   }
+
+  @media (max-width: 540px) {
+    margin-top: 3rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-wpp {
+      width: 15rem;
+      font-size: 1.25rem;
+    }
+  }
 `
 
 export const ConhecaOsDeziguais = styled.div`
@@ -222,6 +363,18 @@ export const ConhecaOsDeziguais = styled.div`
     height: 4px;
     background-color: var(--primary);
   }
+
+  @media (max-width: 540px) {
+    padding-top: 6rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h1::after {
+      width: 100px;
+    }
+  }
 `
 
 export const ConhecaOsDeziguaisContent = styled.div`
@@ -230,6 +383,15 @@ export const ConhecaOsDeziguaisContent = styled.div`
   border: 7px solid var(--primary);
   margin-left: 150px;
   width: 80%;
+
+  @media (max-width: 540px) {
+    margin: 0;
+    margin-top: 3rem;
+    width: 100%;
+
+    padding: 0;
+    border: none;
+  }
 `
 
 export const Dezigual = styled.div`
@@ -252,6 +414,24 @@ export const Dezigual = styled.div`
   p {
     color: var(--tertiary);
     
+  }
+
+  @media (max-width: 540px) {
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    align-content: center;
+    justify-content: center;
+
+    img {
+      width: 150px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      box-shadow: 10px 10px 0 var(--secondary), 20px 20px 0 var(--primary);
+    }
   }
 `
 
